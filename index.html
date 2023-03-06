@@ -5,8 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    
+    <div>
+        <h1>Weather Report</h1>
+        <h2>For the Lovely City of:</h2>
+        <h2>✨ Seattle ✨</h2>
+    </div>
+
+    <div>
+        <section>
+            <h2>Temp</h2>
+            <div>
+                <button id="upButton">🔼</button>
+                <h2 id="tempDisplay">40</h2>
+                <button id="downButton">🔽</button>
+            </div>
+        </section>
+
+        <section>
+            <label for="sky">Choose a Sky:</label>
+            <select name="sky">
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+            </select>
+        </section>
+
+        <section>
+            <h2>Search for a City:</h2>
+            <label for="city">Enter City Here</label>
+            <input type="text" name="city">
+            <button>Search</button>
+        </section>
+    </div>
+
+    <div>
+        <h2>Weather Garden</h2>
+        <section>
+            <h3>The Sky</h3>
+            <h3>The Temp</h3>
+        </section>
+    </div>
 </body>
 </html>
