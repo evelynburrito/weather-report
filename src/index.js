@@ -13,6 +13,19 @@ function whatColor(currentTemp) {
     }
 }
 
+//landscape changing functionality
+function whatLandscape(currentTemp) {
+    if (currentTemp >= 80){
+        document.getElementById("landscape").innerHTML = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"
+    } else if (currentTemp >= 70 && currentTemp <= 79){
+        document.getElementById("landscape").innerHTML = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"
+    } else if (currentTemp >= 60 && currentTemp <= 69){
+        document.getElementById("landscape").innerHTML = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"
+    } else if (currentTemp <= 59){
+        document.getElementById("landscape").innerHTML = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"
+    }
+}
+
 //upButton functionality
 let upButton = document.querySelector("upButton")
 
@@ -21,10 +34,11 @@ upButton.addEventListener("click", increaseByOne())
 function increaseByOne() {
     let stringNumber = document.getElementById('tempDisplay').innerHTML;
 
-    let currentTemp = parseInt(stringNumber)
-    currentTemp += 1
-    document.getElementById('tempDisplay').innerHTML= currentTemp
-    whatColor(currentTemp)
+    let currentTemp = parseInt(stringNumber);
+    currentTemp += 1;
+    document.getElementById('tempDisplay').innerHTML= currentTemp;
+    whatColor(currentTemp);
+    whatLandscape(currentTemp);
 }
 
 
@@ -36,8 +50,9 @@ downButton.addEventListener("click", decreaseByOne())
 function decreaseByOne() {
     let stringNumber = document.getElementById('tempDisplay').innerHTML;
 
-    let currentTemp = parseInt(stringNumber)
-    currentTemp -= 1
-    document.getElementById('tempDisplay').innerHTML = currentTemp
-    whatColor(currentTemp)
+    let currentTemp = parseInt(stringNumber);
+    currentTemp -= 1;
+    document.getElementById('tempDisplay').innerHTML = currentTemp;
+    whatColor(currentTemp);
+    whatLandscape(currentTemp);
 }
