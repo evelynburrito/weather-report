@@ -56,3 +56,10 @@ function decreaseByOne() {
     whatColor(currentTemp);
     whatLandscape(currentTemp);
 }
+
+//functionality to display city name
+function displayCity(){
+    let inputtedCity = document.getElementById("cityInput");
+    let value = inputtedCity.value
+    document.getElementById("cityDisplay").innerHTML = value
+}

@@ -13,7 +13,7 @@
     <div>
         <h1>Weather Report</h1>
         <h2>For the Lovely City of:</h2>
-        <h2>{✨ Seattle ✨}</h2>
+        <h2 id="cityDisplay">{✨ Seattle ✨}</h2>
     </div>
 
     <div>
@@ -39,8 +39,8 @@
         <section>
             <h2>Search for a City:</h2>
             <label for="city">Enter City Here</label>
-            <input type="text" name="city">
-            <button>Search</button>
+            <input id="cityInput" type="text" name="city">
+            <button onclick="displayCity()">Search</button>
         </section>
     </div>
 
